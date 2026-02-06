@@ -600,11 +600,25 @@
 
       <!-- Bottom -->
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
+        <p>© <span id="year"></span> <span style="font-size:40px;">Pravin Mishra.</span> All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">06 02 2026</span> — By Hemanth Balusu</p>
       </div>
 
     </div>
+    <script>
+      const d = new Date();
+      const day = String(d.getDate()).padStart(2, '0');
+      const month = d.toLocaleString('en-US', { month: 'short' });
+      const year = d.getFullYear();
+
+      document.getElementById('deployDate').textContent =`${day} ${month} ${year}`;
+    </script>
+ 
+      
+
+      
+
   </footer>
 
 
