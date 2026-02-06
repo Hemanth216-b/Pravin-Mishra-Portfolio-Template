@@ -606,11 +606,14 @@
       </div>
 
     </div>
-    <Script>
+    <script>
       const d = new Date();
-      const formattedDate = d.toISOString().split('T')[0];
-      document.getElementById("deployDate").textContent = formattedDate;
-      </Script>
+      const day = String(d.getDate()).padStart(2, '0');
+      const month = d.toLocaleString('en-US', { month: 'short' });
+      const year = d.getFullYear();
+
+      document.getElementById('deployDate').textContent =`${day} ${month} ${year}`;
+  </script>
  
       
 
